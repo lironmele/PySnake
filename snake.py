@@ -76,6 +76,9 @@ class Board:
                     board_string += " "
             board_string += "\n"
         return board_string
+    def encode(self):
+        string = self.__str__()
+        return string.encode()
     def spawn_cherry(self):
         self.cherry = Cherry(self.dimensions, self.snake.get_locations())
     def snake_outside_border(self):
